@@ -1,3 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/style.css";
 
-console.log("is hercde");
+console.log(document.querySelector(".container"));
