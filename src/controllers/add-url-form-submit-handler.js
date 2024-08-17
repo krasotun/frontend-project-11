@@ -1,7 +1,6 @@
-import { urlValidationSchema } from "../validators/url-validator";
 import { addErrors, addUrlToFeeds, cleanErrors } from "../view/watcher";
 
-export default (event) => {
+export default (event, urlValidationSchema) => {
   event.preventDefault();
   const urlInput = event.target.querySelector("input");
   const url = urlInput.value;

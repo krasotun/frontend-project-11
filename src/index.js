@@ -1,8 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
+import runApp from "./view/init";
+import i18next from "i18next";
 
-import addUrlFormSubmitHandler from "./controllers/add-url-form-submit-handler";
-
-const form = document.querySelector(".rss-form");
-
-form.addEventListener("submit", addUrlFormSubmitHandler);
+runApp();
