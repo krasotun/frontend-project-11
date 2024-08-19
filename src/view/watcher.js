@@ -1,6 +1,6 @@
 import onChange from "on-change";
 import state from "../model/state";
-import addUrlFormFeedbackRenderer from "./renderers/add-url-form-feedback-renderer";
+import addUrlFormFeedbackRenderer from "../components/add-url-form-feedback.component";
 
 const watcher = onChange(state, (path, value) => {
   if (path === "addFeedForm.errors") {
