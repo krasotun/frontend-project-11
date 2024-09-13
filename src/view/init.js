@@ -1,6 +1,6 @@
 import i18next from "i18next";
 import addUrlFormSubmitHandler from "../controllers/add-url-form-submit-handler";
-import createValidationSchema from "../validators/url-validator";
+import createValidationSchema from "../shared/url-validator";
 import ru from "../i18n/ru";
 
 export default () => {

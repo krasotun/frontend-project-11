@@ -1,4 +1,4 @@
-import { string, object, url } from "yup";
+import { string, object } from "yup";
 
 import urlInterceptor from "../shared/url-interceptor";
 import { haveFeed } from "../view/watcher";
@@ -9,11 +9,11 @@ export default () => {
   return object({
     url: string()
       .url(i18next.t("urlError"))
-      .test("notUniq", i18next.t("notUniqError"), (feed) => {
-        return haveFeed(feed);
+      .test("notUniq", i18next.t("notUniqError"), (url) => {
+        return haveFeed(url);
       })
-      .test("notFeed", i18next.t("notFeedError"), (feed) => {
-        return axios.get(urlInterceptor(feed)).then((response) => {
+      .test("notFeed", i18next.t("notFeedError"), (url) => {
+        return axios.get(urlInterceptor(url)).then((response) => {
           return response.data.status.content_type.startsWith(
             "application/rss+xml"
           );

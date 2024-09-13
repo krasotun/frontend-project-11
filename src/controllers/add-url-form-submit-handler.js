@@ -7,7 +7,7 @@ export default (event, urlValidationSchema) => {
   urlValidationSchema
     .validate({ url })
     .then(({ url }) => {
-      addUrlToFeeds(url);
+      addFeed(url);
       cleanErrors();
       urlInput.value = "";
       urlInput.focus();
